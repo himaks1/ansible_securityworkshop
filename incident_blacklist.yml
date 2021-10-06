@@ -1,6 +1,7 @@
 ---
 - name: Blacklist attacker
   hosts: checkpoint
+  connection: httpapi
 
   vars:
     source_ip: "{{ hostvars['attacker']['private_ip2'] }}"
